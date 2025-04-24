@@ -1,0 +1,139 @@
+.upgrade-shop {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.upgrade-card {
+  background: rgba(0, 77, 38, 0.6);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 2px solid rgba(46, 204, 113, 0.3);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.upgrade-card:hover {
+  transform: var(--hover-transform);
+  border-color: rgba(46, 204, 113, 0.5);
+  background: rgba(0, 77, 38, 0.8);
+}
+
+.upgrade-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.upgrade-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 204, 113, 0.2);
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(46, 204, 113, 0.3);
+}
+
+.upgrade-header h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-green);
+  margin: 0;
+}
+
+.upgrade-description {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.upgrade-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+}
+
+.benefit-item {
+  font-size: 0.9rem;
+  color: var(--success-green);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.upgrade-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cost-amount {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--warning-yellow);
+}
+
+.purchase-button {
+  min-width: 120px;
+  text-align: center;
+}
+
+.upgrade-card.purchased {
+  background: rgba(46, 204, 113, 0.2);
+  border-color: var(--success-green);
+}
+
+.upgrade-card.cannot-afford {
+  opacity: 0.7;
+  filter: grayscale(0.5);
+}
+
+.upgrade-card.purchase-effect {
+  animation: purchaseEffect 1.5s ease-out;
+}
+
+@keyframes purchaseEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(46, 204, 113, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upgrades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upgrade-footer {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .purchase-button {
+    width: 100%;
+  }
+} 
