@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SustainaSphere</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="chatbot.html" ><img src="botpic1.png" class="chat-button" alt="button"></a>
+    <!-- header -->
+    <div class="pic">
+        <div class="navbar" id="navbar">
+            <div class="navbar-brand">
+                <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+                <span class="navbar-name">SustainaSphere</span>
+            </div>
+            <div class="navbar-links">
+                <a href="home.html">Home</a>
+                <a href="ourteam.html">Our Team</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- main -->
+    </div>
+    <section class="about-container">
+        <div class="about-text">
+            <p>
+                Welcome to SustainaSphere - a platform dedicated to driving sustainable change through technology,
+                innovation, and community engagement.
+
+                At SustainaSphere, we believe that every action, big or small, contributes to a greener and more
+                sustainable future. Our mission is to empower individuals and organizations with the knowledge, tools,
+                and resources needed to make eco-conscious decisions in their daily lives.
+            </p>
+        </div>
+        <div class="services">
+            <div class="service-item">
+                <h3>What We Do</h3>
+                <p>Our platform offers a Carbon Footprint Calculator to help you track and reduce your environmental
+                    impact, Sustainability Events to keep you informed about green initiatives, Interactive Learning &
+                    Games for an engaging approach to sustainability, and an AI-Powered Chatbox for personalized
+                    eco-friendly tips and insights.</p>
+            </div>
+            <div class="service-item">
+                <h3>Our Approach</h3>
+                <p>At SustainaSphere, we use technology, education, and community engagement to make sustainability easy
+                    and impactful. Through interactive tools, real-time insights, and gamified learning, we simplify
+                    eco-friendly living for all.</p>
+            </div>
+            <div class="service-item">
+                <h3>Why It Matters</h3>
+                <p>Sustainability is a necessity, not a choice. With climate change, pollution, and resource depletion
+                    on the rise, informed individuals can drive real change. SustainaSphere equips people with the
+                    knowledge and tools to build a greener future.</p>
+            </div>
+            <div class="service-item">
+                <h3>Join the Movement</h3>
+                <p>Sustainability is a shared responsibility, and every action matters. Whether you're adopting greener
+                    habits, learning eco-friendly practices, or seeking sustainable solutions, SustainaSphere is here to
+                    help. Join us in making sustainability a way of life!</p>
+            </div>
+        </div> 
+    </section>
+
+    <!-- box wala part -->
+    <div class="box">
+        <div class="box-item">
+            <div class="box-head">
+                OUR VISION
+                <span class="icon">▼</span>
+            </div>
+            <div class="box-content">
+                <p>We envision a world where sustainability is a way of life. By combining technology with awareness, we
+                    aim to create a platform that not only educates but also inspires action toward a cleaner and
+                    healthier planet.
+
+                    Join us in making a difference—because a sustainable future starts with us!</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="box-item">
+            <div class="box-head">
+                OUR THEORY OF CHANGE
+                <span class="icon">▼</span>
+            </div>
+            <div class="box-content">
+                <p>At SustainaSphere, we believe that awareness leads to action, and action drives impact. By providing
+                    accessible tools, interactive learning, and real-time insights, we empower individuals and
+                    organizations to make informed, sustainable choices. Our approach fosters a shift from knowledge to
+                    meaningful change, creating a ripple effect that contributes to a greener, more sustainable future
+                    for all.
+
+
+
+
+
+
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- javascript for box -->
+    <script>
+        document.querySelectorAll('.box-head').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+<br><br><br>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section" id="navigate">
+            <h3>NAVIGATE</h3>
+            <ul>
+                <li><a href="writeups.html" target="_blank">Writeups</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+                <li><a href="ourteam.html" target="_blank">Our Team</a></li>
+                <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                <li><a href="contactus.html" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section" id="recent-posts">
+            <h3>RECENT POSTS</h3>
+            <ul>
+                <li>
+                    <h4>World Sustainable Development Summit 2025</h4>
+                    <p>5-7 March, 2025</p>
+                </li>
+                <li>
+                    <h4>12th Annual World Ocean Summit & Expo</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
+                <li>
+                    <h4>2025 UN Development Cooperation Forum</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-section" id="social">
+            <h3>CONNECT WITH US</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+    </div>
+</footer>
+
+    
+
+ <!-- JS -->
+ <script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = "#013220";
+        } else {
+            navbar.style.backgroundColor = "transparent";
+        }
+    };
+</script> 
+
+</body>
+</html>
