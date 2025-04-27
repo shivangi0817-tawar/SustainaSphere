@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-Sustainashpere</title>
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <a href="sustainasphere.html" class="logo" target="_blank"><img src="SUSTAINA.jpg" alt="Sustainasphere Logo"></a>
+                <div class="nav-links">
+                    <a href="contactus.html" target="_blank">Contact Us</a>
+                </div>
+                <div class="auth-links">
+                    <a href="login.html" class="login-btn" target="_blank">Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="main-content">
+            <form id="registerForm">
+            <div class="registration-form">
+                <h1>Register</h1>
+                <label for="firstName">First Name: </label>
+                <input type="text" id="firstName" required><br><br>
+                <label for="lastName">Last Name: </label>
+                <input type="text" id="lastName" required><br><br>
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" required><br><br>
+                <label for="password">Password: </label>
+                <input type="password" id="password" required><br><br>
+                <label for="number">Contact Number: </label>
+                <input type="tel" id="number" required><br><br>
+                <label for="user">User Type:</label>
+                <select id="user" required>
+                    <option value="">Select</option>
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+                <input type="submit" id="submit" value="Get Started">
+                <input type="reset" id="reset" value="Reset"><br><br>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const contactNumber = document.getElementById("number").value;
+            const userType = document.getElementById("user").value;
+            const data = { firstName, lastName, email, password, contactNumber, userType };
+            try {
+                
+                const response = await fetch("http://localhost:3001/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                });
+    
+                if (response.ok) {
+                    const result = await response.text();
+                    alert(result); 
+                    window.location.href = "home.html"; 
+                } else {
+                    const errorMessage = await response.text();
+                    alert(`Error: ${errorMessage}`);
+                }
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                alert("Something went wrong. Please try again later.");
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>
