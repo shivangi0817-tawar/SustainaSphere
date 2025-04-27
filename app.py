@@ -11,7 +11,7 @@ CORS(app)
 # MySQL configurations
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'SHIVTAWAR@0717'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'sustainasphere'
 
 mysql = MySQL(app)
