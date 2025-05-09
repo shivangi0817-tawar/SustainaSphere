@@ -1,0 +1,38 @@
+/* Container wrapper */
+.inventory-container {
+    background: linear-gradient(135deg, #064520, #79e7a7);
+    border-radius: 12px;
+    padding: 13px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: white;
+  }
+  
+  /* Header */
+  .inventory-container h5 {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 21px;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  
+  /* Inventory item row */
+  .inventory-item {
+    background:linear-gradient(135deg,rgb(121, 204, 156)0, #d7ffe7);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+    
+  }
+  
+  /* Hover effect */
+  .inventory-item:hover {
+    cursor: pointer;
+  }
+  
+  /* Badge next to item count */
+  .inventory-item .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+  }

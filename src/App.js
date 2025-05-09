@@ -1,20 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import CarbonCalculator from "./components/CarbonCalculator";
-import CarbonInfo from "./components/CarbonInfo";
-import Navbar from "./components/Navbar"; // Ensure Navbar is imported
+import PharmacyGame from './PharmacyGame';
+  // Import full game
 
 function App() {
   return (
-    <Router>
-      <Navbar /> {/* Navbar appears on all pages */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/carbon-info" element={<CarbonInfo />} />
-        <Route path="/calculator" element={<CarbonCalculator />} />
-      </Routes>
-    </Router>
+    <div className="container">
+      <h2 className="text-center my-4">🌿 Eco-Pharmacy Challenge</h2>
+      <PharmacyGame /> {/* ✅ This now renders everything inside PharmacyGame.js */}
+    </div>
   );
 }
 

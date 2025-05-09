@@ -1,15 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
-const rootElement = document.getElementById("root"); // Check if #root exists
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
 
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
+root.render(
+  <React.StrictMode>
+    <DndProvider backend={HTML5Backend}>
       <App />
-    </React.StrictMode>
-  );
-}
+    </DndProvider>
+  </React.StrictMode>
+);
