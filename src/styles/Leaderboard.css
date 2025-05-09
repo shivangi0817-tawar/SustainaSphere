@@ -1,0 +1,23 @@
+body{
+    padding: 10px;
+}
+.mt-5{
+    color: rgb(39, 115, 59);
+    font-weight: bolder;
+    font-size: 19px;
+    background: linear-gradient(135deg, #064520, #79e7a7);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.mt-5 h4{
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}
+.mt-5 ul li{
+    padding: 13px;
+    color: rgb(7, 41, 16);
+    text-shadow: 2px 2px rgb(221, 246, 221) ;
+    border-radius: 8px;
+}
