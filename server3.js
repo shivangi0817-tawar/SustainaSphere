@@ -41,7 +41,7 @@ app.post("/contact", (req, res) => {
   });
 });
 
-const PORT = 3002;
+const PORT = ;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
